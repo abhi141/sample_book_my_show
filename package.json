@@ -1,0 +1,17 @@
+{
+  "name": "sample-book-my-show",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "DEBUG=sample-book-my-show:* node-dev ./bin/www",
+    "prod": "node ./bin/www"
+  },
+  "dependencies": {
+    "debug-trace": "^2.2.3",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.11.18",
+    "morgan": "~1.9.1",
+    "node-dev": "^6.3.0",
+    "uuid": "^8.3.2"
+  }
+}
