@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "3c420363-1cbb-4295-a3f3-11fc141a4cfa",
+		"name": "sample_book_my_show",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create-users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"abi\",\n    \"last_name\": \"sreeram\",\n    \"email\": \"abhishek@gmail.com\",\n    \"password\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/v1/create_user",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"abhishek@gmail.com\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/v1/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movie",
+			"item": [
+				{
+					"name": "create-movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"genre\": \"comedy\",\n    \"movie_name\": \"sreeram\",\n    \"cast\": \"neil,thomson\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/v1/create_movie",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create_movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/v1/get_movies",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"get_movies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket-availability",
+			"item": [
+				{
+					"name": "create-ticket-availability",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": \"c25d2dd1-471b-4ed3-bc74-bd746c111f94\",\n    \"tickets_availble\" : true,\n    \"city\":\"bza\",\n    \"time\":\"10:30 AM\",\n    \"language\":\"Telugu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/v1/create_ticket_availability",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create_ticket_availability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-ticket-availability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket-booking",
+			"item": [
+				{
+					"name": "create-booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "ZmM0MTJmZjgtY2FhNy00ZDlkLTk4NTgtNDg1MWIzZjQyZTg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"account_id\":\"fc412ff8-caa7-4d9d-9858-4851b3f42e89\",\n    \"movie_id\":\"c25d2dd1-471b-4ed3-bc74-bd746c111f94\",\n    \"city\":\"bza\",\n    \"time\":\"10:30 AM\",\n    \"no_of_tickets\":5,\n    \"ticket_availability_id\":\"a7c06b14-f611-4ff2-9ba8-088fe2c96946\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/v1/create_booking",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create_booking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
